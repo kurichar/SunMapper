@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sunmapper.SunlightMapActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/sceneform_fragment"
+            android:name="com.google.ar.sceneform.ux.ArFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="FragmentTagUsage"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <!-- BBox overlay -->
+
+        <com.sunmapper.BBoxOverlayView
+            android:id="@+id/bboxOverlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="@id/sceneform_fragment"
+            app:layout_constraintEnd_toEndOf="@id/sceneform_fragment"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/sceneform_fragment"
+            app:layout_constraintTop_toTopOf="@id/sceneform_fragment"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/overlay_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <!-- Control buttons -->
+
+        <ImageView
+            android:id="@+id/clearButton"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:layout_marginHorizontal="@dimen/margin_buttons"
+
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="17dp"
+            android:background="@drawable/bg_buttons"
+            android:contentDescription="@string/clear"
+            android:src="@drawable/clear_all"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/button_icon_color" />
+
+        <!-- Existing action buttons -->
+
+        <!--            app:layout_constraintBottom_toTopOf="@+id/clearButton"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/captureButton"-->
+
+
+        <!-- NEW: Date picker button -->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/dockButton"-->
+<!--            android:layout_width="@dimen/button_size"-->
+<!--            android:layout_height="@dimen/button_size"-->
+<!--            android:layout_marginHorizontal="@dimen/margin_buttons"-->
+<!--            android:background="@drawable/bg_buttons"-->
+<!--            android:contentDescription="@string/dock_anchor"-->
+<!--            android:padding="@dimen/button_icon_margin"-->
+<!--            android:src="@drawable/dock_anchor_icon"-->
+<!--            app:tint="@color/button_icon_color"-->
+<!--            tools:layout_editor_absoluteX="28dp"-->
+<!--            tools:layout_editor_absoluteY="183dp" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/lockButton"-->
+<!--            android:layout_width="@dimen/button_size"-->
+<!--            android:layout_height="@dimen/button_size"-->
+<!--            android:layout_marginHorizontal="@dimen/margin_buttons"-->
+<!--            android:background="@drawable/bg_buttons"-->
+<!--            android:contentDescription="@string/lock_anchor"-->
+<!--            android:padding="@dimen/button_icon_margin"-->
+<!--            android:src="@drawable/lock_anchor_icon"-->
+<!--            app:tint="@color/button_icon_color"-->
+<!--            tools:layout_editor_absoluteX="16dp"-->
+<!--            tools:layout_editor_absoluteY="116dp" />-->
+
+        <!-- NEW: Time slider + label -->
+
+        <Button
+            android:id="@+id/saveFloorButton"
+            android:layout_width="100dp"
+            android:layout_height="53dp"
+
+            android:layout_marginTop="12dp"
+            android:text="Select Floor"
+            app:layout_constraintEnd_toEndOf="@+id/captureButton"
+            app:layout_constraintTop_toBottomOf="@+id/captureButton" />
+
+        <Button
+            android:id="@+id/captureButton"
+            android:layout_width="101dp"
+            android:layout_height="81dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="16dp"
+            android:text="Hold to find window"
+            app:layout_constraintEnd_toEndOf="@+id/sceneform_fragment"
+            app:layout_constraintTop_toBottomOf="@+id/clearButton" />
+
+<!--        <Button-->
+<!--            android:id="@+id/placeBeamButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:text="Beam"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/saveFloorButton"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/saveFloorButton" />-->
+
+        <Button
+            android:id="@+id/dateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Pick Date"
+            app:layout_constraintBottom_toTopOf="@+id/timeControls"
+            app:layout_constraintStart_toStartOf="@+id/sceneform_fragment" />
+
+        <LinearLayout
+            android:id="@+id/timeControls"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#66000000"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <TextView
+                android:id="@+id/timeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hour: 12:00"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <SeekBar
+                android:id="@+id/timeSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1439" />
+
+            <Button
+                android:id="@+id/nowButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Now"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/timeSlider" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+numpy
+opencv-python
+pillow
+transformers
+websockets
+zeroconf
+requests
+pvlib
+pandas

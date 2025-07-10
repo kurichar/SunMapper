@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SunMapper</string>
+    <string name="dock_anchor">Dock Anchor</string>
+    <string name="lock_anchor">Lock Anchor</string>
+    <string name="clear">Clear</string>
+
+</resources>
