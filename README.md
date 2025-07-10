@@ -18,11 +18,20 @@ A two-part system for real-time indoor sunlight mapping on floor surfaces.
 
 ## Install PyTorch with CUDA support
 This project uses the IDEA-Research/grounding-dino-base model, which runs much faster on GPU.
+so it is recommended to install PyTorch with CUDA support.
+Make sure to install the version compatible with your CUDA version.
 
 For example, for CUDA 11.8:
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
+## Install other dependencies
+```bash
+pip install -r requirements.txt
+``` 
+
+
+
 ## How to use:
 1. build the Android app using Android Studio
 2. run the Python client:
