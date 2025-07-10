@@ -49,19 +49,27 @@ if anything goes wrong you can reset the scene by pressing the top right button,
 
 ## Demonstrations:
 Detecting a window and locking it in AR view:
+
 ![window selection](https://github.com/user-attachments/assets/4d14fba9-631d-46ba-8b97-da2bdd86e0b8)
 
+
 Changing time slider:
+
 ![time slider](https://github.com/user-attachments/assets/54f50d92-e6f8-4156-ac1d-865d84090b50)
 
+
 Changing the date:
+
 ![date change](https://github.com/user-attachments/assets/62291b99-7755-4e08-bd91-84b0a79d54a6)
 
 ## Additional 'nice to have' features:
 Floating cardinal markers:
+
 ![cardinal markers](https://github.com/user-attachments/assets/2d5046b0-e171-4501-b46b-03ebc79035a8)
 
+
 Floor continuation:
+
 ![floor continuation](https://github.com/user-attachments/assets/1922c225-6b29-473e-92a9-e4291e7313bd)
 
 
