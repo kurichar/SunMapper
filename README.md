@@ -1,4 +1,6 @@
 # SunMapper
+Plan indoor plant placement or furniture positioning by visualizing exactly where sunlight will fall throughout the day and year.
+---
 
 A two-part system for real-time indoor sunlight mapping on floor surfaces.  
 - **Android client** (ARCore/Ktor) detects ARCore environment and streams frames & metadata over mDNS.  
